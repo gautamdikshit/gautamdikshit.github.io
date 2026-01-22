@@ -501,6 +501,7 @@
         }
 
         /* Contact Section */
+        
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -512,6 +513,10 @@
         .contact-info h3 {
             font-size: 28px;
             margin-bottom: 30px;
+        }
+        .contact-info .info-item .social-link {
+            width: 100%;
+            justify-content: flex-start;
         }
 
         .info-item {
@@ -531,27 +536,58 @@
             font-size: 16px;
         }
 
-        .blog-section {
-            border: 1px solid #e5e5e5;
-            padding: 30px;
-            border-radius: 8px;
+        .social-section {
             margin-top: 40px;
         }
 
-        .blog-section h4 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .blog-section p {
-            color: #999;
-            font-size: 14px;
-        }
-
-        .contact-form {
+        .social-links {
             display: flex;
-            flex-direction: column;
             gap: 20px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 12px 12px 8px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-link:hover {
+            background: #fff;
+            border-color: #007bff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,123,255,0.15);
+        }
+
+        .social-link i {
+            font-size: 1.3rem;
+            margin-left: 0;
+        }
+
+        .social-link span {
+            font-weight: 500;
+        }
+
+        .social-link:nth-child(1):hover {
+            border-color: #1877f2;
+            color: #1877f2;
+        }
+
+        .social-link:nth-child(2):hover {
+            border-color: #e4405f;
+            color: #e4405f;
+        }
+
+        .social-link:nth-child(3):hover {
+            border-color: #1da1f2;
+            color: #1da1f2;
         }
 
         .form-group label {
@@ -599,19 +635,7 @@
             background: #333;
         }
 
-        .watermark {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #000;
-            color: #fff;
-            padding: 8px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+    
 
         @media (max-width: 768px) {
             nav {
@@ -658,21 +682,14 @@
     <section id="home" class="hero">
         <div class="hero-subtitle">DATA SCIENTIST | AI/ML ENGINEER</div>
         <h1 class="hero-title">Er. Dikshit Gautam Pariyar</h1>
-        
         <p class="hero-description">
-            Hello, my name is Dikshit, and I’m from Pokhara, Nepal.
-            I’m a Computer Engineering graduate with a strong interest and background in data science.
-            I’ve worked on data analysis and AI/ML projects, and I genuinely enjoy working with data.
-            From cleaning messy datasets to applying different statistical and machine learning approaches, playing around with the data and presenting them visually so they are easy to understand. I genuinely enjoy this whole process.
-            I’m someone who is curious, consistent, and always eager to learn new things. </p>
-
-        <p class="hero-description">
-            Outside of work, I enjoy gaming (Valorant, FIFA), anime, hiking, and spending time with my friends (good food and good music), which helps me stay focused and balanced.
+            Welcome! I’m Dikshit, a Data Scientist and AI/ML Engineer passionate about data.
+            My work spans data analysis, machine learning, and AI-powered applications. 
+            I’m motivated by continuous learning and solving practical problems with all my learnings.
         </p>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/dikshitgautampariyar/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/gautamdikshit" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="mailto:gautamdixit120@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
         </div>
         <a href="#contact" style="text-decoration: none;">
             <button class="cta-button">Get In Touch</button>
@@ -685,16 +702,15 @@
         <div class="about-content">
             <div class="about-text">
                 <h3>Background</h3>
-                <p>
-                    I'm a Computer Engineering graduate from Pokhara University with a strong 
-                    foundation in Artificial Intelligence, Neural Networks, and Natural Language 
-                    Processing. My journey in data science began with a deep curiosity about how 
-                    machines can learn from data.
+                <p style="text-align: justify;">
+                    Hello, my name is Dikshit, and I’m from Pokhara, Nepal.
+                    I’m a Computer Engineering graduate with a strong interest and background in data science.
+                    I’ve worked on data analysis and AI/ML projects, and I genuinely enjoy working with data.
+                    From cleaning messy datasets to applying different statistical and machine learning approaches, playing around with the data and presenting them visually so they are easy to understand. I genuinely enjoy this whole process.
+                    I’m someone who is curious, consistent, and always eager to learn new things.
                 </p>
-                <p>
-                    Currently working as a Data Scientist Intern at Pokhara Research Centre, I 
-                    specialize in developing machine learning solutions and creating data-driven 
-                    insights. I'm passionate about applying AI/ML techniques to solve real-world problems.
+                <p style="text-align: justify;">
+                    Outside of work, I enjoy gaming (Valorant, FIFA), anime, hiking, and spending time with my friends (good food and good music), which helps me stay focused and balanced.
                 </p>
             </div>
             <div class="education">
@@ -974,48 +990,34 @@
                     <div class="info-value">gautamdixit120@gmail.com</div>
                 </div>
                 <div class="info-item">
-                    <div class="info-label">PHONE</div>
-                    <div class="info-value">+977-9768050291</div>
-                </div>
-                <div class="info-item">
                     <div class="info-label">LOCATION</div>
                     <div class="info-value">Pokhara, Nepal</div>
                 </div>
-
-                <!-- <div class="blog-section">
-                    <h4>Blog Section</h4>
-                    <p>Coming soon...</p>
-                    <p>Stay tuned for insights on AI, ML, and data science.</p>
-                </div> -->
             </div>
 
-            <!-- <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">NAME</label>
-                    <input type="text" id="name" placeholder="Your name">
+            <div class="contact-info">
+                <h3>Social Links</h3>
+                <div class="info-item">
+                    <a href="https://www.facebook.com/dikshitgautam120/" target="_blank" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" placeholder="your.email@example.com">
+                <div class="info-item">
+                    <a href="https://www.instagram.com/gautam.dikshit/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="subject">SUBJECT</label>
-                    <input type="text" id="subject" placeholder="What's this about?">
+                <div class="info-item">
+                    <a href="https://x.com/Dikshit11626754" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="message">MESSAGE</label>
-                    <textarea id="message" placeholder="Your message..."></textarea>
-                </div>
-                <button type="submit" class="submit-button">
-                    Send Message <i class="fas fa-paper-plane"></i>
-                </button>
-            </form> -->
+            </div>
         </div>
     </section>
-
-    <!-- <div class="watermark">
-        <i class="fas fa-rocket"></i> Made with Emergent
-    </div> -->
 
     <script>
         // Smooth scrolling for navigation links
